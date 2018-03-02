@@ -6,6 +6,10 @@ public class Node {
     //结点域
     Node next;
 
+    public Node(){
+
+    }
+
     public Node(int value){
         this.value = value;
         this.next = null;
@@ -17,17 +21,21 @@ public class Node {
     public void display(){
         System.out.print(this.value + " ");
     }
+
+    public int getValue(){
+        return value;
+    }
 }
 
 class NodeList{
-    private Node head;
+    Node head;
 
     public NodeList(){
         this.head = null;
     }
 
     /**
-     * 在头结点后插入一个结点
+     * 在头结点前插入一个结点
      */
     public void insert(int value){
         Node aNode = new Node(value);
@@ -38,6 +46,23 @@ class NodeList{
             head = aNode;
         }
 
+    }
+
+    /**
+     * 在头结点后插入结点
+     */
+    public void insertBack(int value){
+        Node aNode = new Node(value);
+        Node cur = new Node();
+        if(head == null){
+            head = aNode;
+            cur = aNode;
+        }
+
+        else{
+            aNode.next = cur.next;
+            cur.next = aNode;
+        }
     }
 
     /**
@@ -60,6 +85,16 @@ class NodeList{
             cur = cur.next;
         }
     }
+
+    public Node getHead(){
+        return head;
+    }
+
+    public void setHead(Node aNode){
+        this.head = aNode;
+    }
+
+
 }
 
 class testLinkedList{
@@ -72,8 +107,16 @@ class testLinkedList{
 
         list.display();
 
-        System.out.println("delete");
-        list.delete();
-        list.display();
+        NodeList listb = new NodeList();
+        listb.insertBack(1);
+        listb.insertBack(2);
+        listb.insertBack(3);
+        listb.insertBack(4);
+
+        listb.display();
+
+//        System.out.println("delete");
+//        list.delete();
+//        list.display();
     }
 }
