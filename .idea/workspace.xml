@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83544039-6ce6-446e-b573-4d0cad7e4dae" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sort/MergeSort.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/LinkedList/Node.java" afterPath="$PROJECT_DIR$/src/LinkedList/Node.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,8 +50,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="215">
+              <caret line="59" column="9" lean-forward="false" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
               <folding>
                 <element signature="e#261#262#0" expanded="true" />
                 <element signature="e#311#312#0" expanded="true" />
@@ -61,10 +59,10 @@
                 <element signature="e#367#368#0" expanded="true" />
                 <element signature="e#425#426#0" expanded="true" />
                 <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#1378#1379#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
                 <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1509#1510#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -392,7 +390,7 @@
       <updated>1519881665985</updated>
       <workItem from="1519881670046" duration="12000" />
       <workItem from="1519901129773" duration="6876000" />
-      <workItem from="1519955173757" duration="9219000" />
+      <workItem from="1519955173757" duration="10027000" />
     </task>
     <task id="LOCAL-00001" summary="NO237 delete node in a linked list">
       <created>1519957230774</created>
@@ -419,7 +417,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16107000" />
+    <option name="totallyTimeSpent" value="16915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -604,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="215">
+          <caret line="59" column="9" lean-forward="false" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
           <folding>
             <element signature="e#261#262#0" expanded="true" />
             <element signature="e#311#312#0" expanded="true" />
@@ -613,10 +611,10 @@
             <element signature="e#367#368#0" expanded="true" />
             <element signature="e#425#426#0" expanded="true" />
             <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#1378#1379#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
             <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
           </folding>
         </state>
       </provider>

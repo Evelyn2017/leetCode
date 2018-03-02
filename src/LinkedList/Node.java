@@ -53,16 +53,17 @@ class NodeList{
      */
     public void insertBack(int value){
         Node aNode = new Node(value);
-        Node cur = new Node();
+        Node cur = head;
         if(head == null){
+            aNode.next = head;
             head = aNode;
-            cur = aNode;
         }
-
         else{
-            aNode.next = cur.next;
+            while(cur.next != null)
+                cur = cur.next;
             cur.next = aNode;
         }
+
     }
 
     /**
