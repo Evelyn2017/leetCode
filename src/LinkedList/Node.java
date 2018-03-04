@@ -194,6 +194,12 @@ class testLinkedList{
             a = a.next;
         }
 
+        System.out.println();
+        System.out.print(list.mergeTwoList(list.head, listb.head).value);
+
+
+
+
 
 
 //        System.out.println("delete");
