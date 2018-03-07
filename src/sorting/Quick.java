@@ -14,11 +14,11 @@ public class Quick {
         int key = arr[low];
         //若两个指针相遇，则数组达到有序状态
         while(low < high){
-            while(arr[high] > key && high > low){
+            while(arr[high] >= key && high > low){
                 high--;
             }
             arr[low] = arr[high];
-            while(arr[low] < key && high > low ){
+            while(arr[low] <= key && high > low ){
                 low ++;
             }
             arr[high] = arr[low];
@@ -41,8 +41,8 @@ public class Quick {
     }
 
     public static void main(String[] args){
-         int[] arr = {6, 3, 4, 2, 1, 5};
-         quickSort(arr, 0, 5);
+         int[] arr = {7,4,3,1,6};
+         quickSort(arr, 0, 4);
          for(int i = 0; i < arr.length; i++)
              System.out.print(arr[i] + " ");
     }
