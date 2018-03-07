@@ -22,6 +22,7 @@ public class Quick {
                 low ++;
             }
             arr[high] = arr[low];
+
         }
         arr[high] = key;
         return high;
@@ -33,11 +34,14 @@ public class Quick {
         int index = partition(arr, low, high);
         quickSort(arr, low, index - 1 );
         quickSort(arr, index + 1, high);
+    }
+
+    public static void sort(int[] arr, int low, int high){
 
     }
 
     public static void main(String[] args){
-         int[] arr = {11, 2, 9, 4, 7,15};
+         int[] arr = {6, 3, 4, 2, 1, 5};
          quickSort(arr, 0, 5);
          for(int i = 0; i < arr.length; i++)
              System.out.print(arr[i] + " ");
