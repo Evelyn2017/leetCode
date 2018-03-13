@@ -34,7 +34,7 @@ public class Insert {
 
     public static void main(String[] args){
         int[] arr = {3,2,4,7,1,9,0};
-        int a[] = sort1(arr,6);
+        int a[] = sort1 (arr,7);
         for(int i = 0; i < arr.length; i++)
             System.out.print(a[i] + " ");
     }
