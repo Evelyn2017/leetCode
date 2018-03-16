@@ -1,8 +1,7 @@
 package prac;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.Scanner;
+
 
 /**
  * 字符串-->字符数组： toCharArray()
@@ -12,12 +11,15 @@ import java.util.Scanner;
 public class HuiWen {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        while(sc.hasNext()){
-//            String s = sc.nextLine();
-//            System.out.println(isHui1(s));
-//        }
-        String s = " ";
-        System.out.println(isHui1(s));
+        while(sc.hasNext()){
+            String s = sc.nextLine();
+            System.out.println(isHui1(s));
+        }
+//        String s = " ";
+//        System.out.println(isHui1(s));
+//
+//        int m = 1201;
+//        String n = String.valueOf(m);
 
 
     }

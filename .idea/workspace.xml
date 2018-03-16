@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83544039-6ce6-446e-b573-4d0cad7e4dae" name="Default" comment="insert">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/prac/HuiWen.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/prac/Trans.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/NO000/TwoSum/TwoSum.java" afterPath="$PROJECT_DIR$/src/NO000/TwoSum/TwoSum.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetCode/prac/HuiWen.class" afterPath="$PROJECT_DIR$/out/production/leetCode/prac/HuiWen.class" />
+      <change beforePath="$PROJECT_DIR$/src/prac/HuiWen.java" afterPath="$PROJECT_DIR$/src/prac/HuiWen.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,14 +52,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HuiWen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HuiWen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prac/HuiWen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Trans.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/prac/Trans.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,6 +113,7 @@
         <option value="$PROJECT_DIR$/src/sorting/Insert.java" />
         <option value="$PROJECT_DIR$/src/NO000/TwoSum/TwoSum.java" />
         <option value="$PROJECT_DIR$/src/prac/HuiWen.java" />
+        <option value="$PROJECT_DIR$/src/prac/Trans.java" />
       </list>
     </option>
   </component>
@@ -145,6 +155,12 @@
               <item name="leetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="prac" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -172,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HuiWen">
+  <component name="RunManager" selected="Application.Trans">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -256,6 +272,25 @@
       <module name="leetCode" />
       <envs />
     </configuration>
+    <configuration name="Trans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="prac.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="prac.Trans" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="leetCode" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -268,25 +303,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <envs />
-    </configuration>
-    <configuration name="testLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="LinkedList.testLinkedList" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="leetCode" />
       <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -350,19 +366,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.testLinkedList" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Bubble" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Quick" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Insert" />
-      <item index="4" class="java.lang.String" itemvalue="Application.HuiWen" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Bubble" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Quick" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Insert" />
+      <item index="3" class="java.lang.String" itemvalue="Application.HuiWen" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Trans" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.HuiWen" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Insert" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Quick" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Bubble" />
-        <item index="4" class="java.lang.String" itemvalue="Application.testLinkedList" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Trans" />
+        <item index="1" class="java.lang.String" itemvalue="Application.HuiWen" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Insert" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Quick" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Bubble" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +401,7 @@
       <workItem from="1520320327640" duration="4868000" />
       <workItem from="1520407247986" duration="3678000" />
       <workItem from="1520923515480" duration="2136000" />
-      <workItem from="1521159117838" duration="2279000" />
+      <workItem from="1521159117838" duration="3549000" />
     </task>
     <task id="LOCAL-00001" summary="NO237 delete node in a linked list">
       <created>1519957230774</created>
@@ -447,7 +463,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36730000" />
+    <option name="totallyTimeSpent" value="38000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -843,11 +859,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/prac/HuiWen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prac/Trans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
