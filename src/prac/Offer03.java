@@ -28,5 +28,4 @@ public class Offer03 {
         return result;
     }
 
-
 }
