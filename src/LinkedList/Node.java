@@ -84,15 +84,6 @@ class NodeList{
         return rev;
     }
 
-    public Node reverseNode(Node h){
-        Node rev = new Node();
-        while(h.next != null){
-            rev.next = h;
-            h = rev;
-        }
-        return rev;
-    }
-
     public Node reverseCur(Node cur){
         Node pre = null;
         Node nex = null;
@@ -196,11 +187,6 @@ class testLinkedList{
 
         System.out.println();
         System.out.print(list.mergeTwoList(list.head, listb.head).value);
-
-
-
-
-
 
 //        System.out.println("delete");
 //        list.delete();
