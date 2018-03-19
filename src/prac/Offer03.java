@@ -14,15 +14,16 @@ class ListNode{
 
 public class Offer03 {
     public ArrayList<Integer> printList(ListNode listNode){
-        Stack<ListNode> res = new Stack<>();
+        Stack<Integer> res = new Stack<>();
         ArrayList<Integer> result = new ArrayList<>();
-        while(listNode.next != null){
-            res.push(listNode);
-            listNode = listNode.next;
+        ListNode temp = listNode;
+        while(temp.next != null){
+            res.push(temp.val);
+            temp = temp.next;
         }
 
         while(!res.empty()){
-            result.add(res.pop().val);
+            result.add(res.pop());
         }
         return result;
     }
