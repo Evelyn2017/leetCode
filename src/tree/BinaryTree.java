@@ -49,8 +49,48 @@ public class BinaryTree {
         }
     }
 
+    /**
+     * 插入
+     */
+    public static boolean insert(Node root, int val){
+        if(root == null){
+            root.setValue(val);
+            root.setRight(null);
+            root.setRight(null);
+            return true;
+        }
+        else if(root.getValue() == val)
+            return false;
 
+        else if(val < root.getValue())
+            return(insert(root.getLeft(), val));
+        else
+            return(insert(root.getRight(), val));
+    }
 
+    /**
+     * 删除
+     */
+    public static Node delete(Node root, int val){
+        if(root == null) return null;
+        if(root.getValue() > val)
+            root.setRight(delete(root.getRight(), val));
+        else if(root.getValue() < val)
+            root.setLeft(delete(root.getLeft(), val));
+        else{
+            //只有左子树或右子树
+            if(root.getRight() == null || root.getLeft() == null)
+                root = (root.getLeft() != null) ? root.getLeft() : root.getRight();
+            else{
+                Node cur = root.getRight();
+                while(cur.getLeft() != null)
+                    cur = cur.getLeft();
+                root.setValue(cur.getValue());
+                root.setRight(delete(root.getRight(), cur.getValue()));
+            }
+        }
+        return root;
+    }
 }
 
 /**
