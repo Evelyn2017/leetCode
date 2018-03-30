@@ -18,6 +18,8 @@ public class BinaryTree {
         midOrder(root);
         System.out.println("\n层次");
         levelOrder(root);
+
+        System.out.println("\n深度： " + getDepth(root));
     }
 
     /**
@@ -113,6 +115,18 @@ public class BinaryTree {
             }
         }
         return root;
+    }
+
+    /**
+     * 求深度
+     */
+    public static int getDepth(Node root){
+        if(root == null) return 0;
+        else{
+            int left = getDepth(root.getLeft());
+            int right = getDepth(root.getRight());
+            return (1 + Math.max(left, right));
+        }
     }
 }
 
