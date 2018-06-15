@@ -3,6 +3,9 @@ package coding_interview;
 /**
  * singleton
  * A singleton has only one instance which must be created by itself.
+ *
+ * 懒汉式单例模式：在类加载时不初始化。
+ * 饿汉式单例模式：在类加载时就完成了初始化，所以类加载比较慢，但获取对象的速度快。
  */
 
 public class Problem02 {
