@@ -7,18 +7,20 @@ public class PalindromeNumber {
     /**
      * no need to use string.
      * @param x: a number
-     * @return true or fasle
+     * @return true or false
      */
     public boolean isPalindrome(int x) {
-        if (x < 0 || (x != 0 && x % 10 == 0))
-            return false;
+        if(x <= 0 || x  % 10 == 0)          // Negative numbers or a number like 10 can not be a palindrome
+            return x == 0;
 
-        int number = (int) Math.log10(x) + 1;
-        int reverse = 0;
-        for (int i = 0; i < number / 2; ++i) {
-            reverse = 10 * reverse + x % 10;
+        int rev = 0;
+
+        while(x > rev)
+        {
+            rev = (rev * 10) + (x % 10);
             x /= 10;
         }
-        return (x == reverse) || (x / 10 == reverse);
+
+        return x == rev || x == rev / 10;	// Number of digits in n is Even or Odd
     }
 }
