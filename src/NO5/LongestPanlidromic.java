@@ -1,9 +1,14 @@
-package NO9;
+package NO5;
 
 public class LongestPanlidromic {
     private int start;
     private int maxLen;
 
+    /**
+     * expand the substring from i both left and right
+     * @param s String: abaccas
+     * @return acca
+     */
     public String getLongestsub(String s) {
         if (s.length() < 2)
             return s;
