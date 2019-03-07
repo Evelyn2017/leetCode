@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="No 4 Median of two sorted array.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="No 5 longest panlidromic substring.">
+      <change afterPath="$PROJECT_DIR$/src/NO7/ReverseInt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NO9/LongestPanlidromic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NO5/LongestPanlidromic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +14,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NO3/LongestSubstring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="480">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NO7/ReverseInt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -55,6 +72,7 @@
         <option value="$PROJECT_DIR$/src/NO4/MedianNum.java" />
         <option value="$PROJECT_DIR$/src/NO9/LongestPanlidromic.java" />
         <option value="$PROJECT_DIR$/src/NO5/LongestPanlidromic.java" />
+        <option value="$PROJECT_DIR$/src/NO7/ReverseInt.java" />
       </list>
     </option>
   </component>
@@ -92,7 +110,14 @@
               <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="leetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="NO141" type="462c0819:PsiDirectoryNode" />
+              <item name="AddTwoNumbers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AddTwoNumbers" type="462c0819:PsiDirectoryNode" />
+              <item name="AddTwoNumbers.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -103,7 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551928550394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551929844517" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -123,7 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MedianNum">
+  <component name="RunManager" selected="Application.ReverseInt">
     <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tree.BinaryTree" />
       <module name="leetCode" />
@@ -166,6 +191,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReverseInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NO7.ReverseInt" />
+      <module name="leetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NO7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -191,9 +230,11 @@
       <item itemvalue="Application.BinaryTree" />
       <item itemvalue="Application.Problem02" />
       <item itemvalue="Application.MedianNum" />
+      <item itemvalue="Application.ReverseInt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReverseInt" />
         <item itemvalue="Application.MedianNum" />
         <item itemvalue="Application.Problem02" />
         <item itemvalue="Application.BinaryTree" />
@@ -217,7 +258,7 @@
       <workItem from="1551682030951" duration="967000" />
       <workItem from="1551775045492" duration="547000" />
       <workItem from="1551860477909" duration="2749000" />
-      <workItem from="1551927699113" duration="810000" />
+      <workItem from="1551927699113" duration="2035000" />
     </task>
     <task id="LOCAL-00001" summary="get">
       <created>1522383621840</created>
@@ -268,17 +309,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551928009251</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="No 5 longest panlidromic substring.">
+      <created>1551928581324</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551928581324</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7966000" />
+    <option name="totallyTimeSpent" value="9191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -287,7 +335,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3490446" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3490446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -296,7 +344,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299363" />
       <window_info anchor="bottom" id="Duplicate detector" order="12" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -320,7 +368,20 @@
     <MESSAGE value="singleton 3-7" />
     <MESSAGE value="No 9 palindrome" />
     <MESSAGE value="No 4 Median of two sorted array." />
-    <option name="LAST_COMMIT_MESSAGE" value="No 4 Median of two sorted array." />
+    <MESSAGE value="No 5 longest panlidromic substring." />
+    <option name="LAST_COMMIT_MESSAGE" value="No 5 longest panlidromic substring." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NO7/ReverseInt.java</url>
+          <line>5</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Stack/StackTwo.java">
@@ -366,20 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NO000/TwoSum/TwoSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NO9/PalindromeNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
@@ -401,13 +448,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO000/TwoSum/TwoSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NO3/LongestSubstring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO7/ReverseInt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
