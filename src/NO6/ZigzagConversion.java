@@ -13,7 +13,7 @@ public class ZigzagConversion {
      *         b d f h n
      *         c   g
      */
-    public static String conversion(String s, int numRow) {
+    private static String conversion(String s, int numRow) {
         if (s.length() == 1)
             return s;
 
@@ -25,7 +25,7 @@ public class ZigzagConversion {
             rows.add(new StringBuilder());
 
         for (char c : s.toCharArray()) {
-            rows.get(currRow).append(c);
+            rows.get(currRow).append(c); //
             if (currRow == 0 || currRow == numRow - 1)
                 goingDown = !goingDown;
             currRow += goingDown ? 1 : -1;
