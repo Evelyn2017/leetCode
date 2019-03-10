@@ -27,7 +27,7 @@ public class ZigzagConversion {
             rows.get(currRow).append(c); //遍历字符串，把当前字符分配给第i个row
             if (currRow == 0 || currRow == numRow - 1) //判断是否转换方向
                 goingDown = !goingDown;
-            currRow += goingDown ? 1 : -1; //向下走currRow - 1； 向上currRow + 1
+            currRow += goingDown ? 1 : -1; //向下走currRow + 1； 向上currRow - 1
         }
 
         StringBuilder result = new StringBuilder();
