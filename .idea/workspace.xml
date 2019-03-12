@@ -145,7 +145,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552391966045" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552392070231" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -165,21 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ZigzagConversion">
-    <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tree.BinaryTree" />
-      <module name="leetCode" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tree.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ThreeSUm">
     <configuration name="MedianNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NO4.MedianNum" />
       <module name="leetCode" />
@@ -215,6 +201,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="NO7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSUm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NO15.ThreeSUm" />
+      <module name="leetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NO15.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -258,19 +258,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BinaryTree" />
       <item itemvalue="Application.Problem02" />
       <item itemvalue="Application.MedianNum" />
       <item itemvalue="Application.ReverseInt" />
       <item itemvalue="Application.ZigzagConversion" />
+      <item itemvalue="Application.ThreeSUm" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreeSUm" />
         <item itemvalue="Application.ZigzagConversion" />
         <item itemvalue="Application.ReverseInt" />
         <item itemvalue="Application.MedianNum" />
         <item itemvalue="Application.Problem02" />
-        <item itemvalue="Application.BinaryTree" />
       </list>
     </recent_temporary>
   </component>

@@ -12,7 +12,7 @@ public class ThreeSUm {
      *         [-1, -1, 2]
      *         ]
      */
-    public List<List<Integer>> threeSum(int[] nums){
+    public static List<List<Integer>> threeSum(int[] nums){
         List<List<Integer>> result = new LinkedList<>();
         Arrays.sort(nums);        //sort the array to avoid duplicated solutions
 
@@ -40,6 +40,11 @@ public class ThreeSUm {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        System.out.println(threeSum(nums));
     }
 
 
