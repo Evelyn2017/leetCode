@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="NO15 Three sum">
+      <change afterPath="$PROJECT_DIR$/src/NO16/ThreeSumCloest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NO15/ThreeSUm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NO15/ThreeSUm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,14 +56,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NO15/ThreeSUm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="29" column="92" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
+            <state relative-caret-position="336">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NO16/ThreeSumCloest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -109,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/NO6/ZigzagConversion.java" />
         <option value="$PROJECT_DIR$/src/NO11/MostWATER.java" />
         <option value="$PROJECT_DIR$/src/NO15/ThreeSUm.java" />
+        <option value="$PROJECT_DIR$/src/NO16/ThreeSumCloest.java" />
       </list>
     </option>
   </component>
@@ -122,6 +132,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,14 +150,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552392070231" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552482146937" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -165,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreeSUm">
+  <component name="RunManager" selected="Application.ThreeSumCloest">
     <configuration name="MedianNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NO4.MedianNum" />
       <module name="leetCode" />
@@ -173,20 +183,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="NO4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Problem02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coding_interview.Problem02" />
-      <module name="leetCode" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="coding_interview.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,6 +211,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="NO15.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSumCloest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NO16.ThreeSumCloest" />
+      <module name="leetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="NO16.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -258,19 +268,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Problem02" />
       <item itemvalue="Application.MedianNum" />
       <item itemvalue="Application.ReverseInt" />
       <item itemvalue="Application.ZigzagConversion" />
       <item itemvalue="Application.ThreeSUm" />
+      <item itemvalue="Application.ThreeSumCloest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreeSumCloest" />
         <item itemvalue="Application.ThreeSUm" />
         <item itemvalue="Application.ZigzagConversion" />
         <item itemvalue="Application.ReverseInt" />
         <item itemvalue="Application.MedianNum" />
-        <item itemvalue="Application.Problem02" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +305,8 @@
       <workItem from="1552054698169" duration="1078000" />
       <workItem from="1552223519572" duration="212000" />
       <workItem from="1552310848374" duration="26000" />
-      <workItem from="1552390895951" duration="1068000" />
+      <workItem from="1552390895951" duration="1218000" />
+      <workItem from="1552481438394" duration="655000" />
     </task>
     <task id="LOCAL-00001" summary="get">
       <created>1522383621840</created>
@@ -409,17 +420,31 @@
       <option name="project" value="LOCAL" />
       <updated>1552391256299</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="NO15 Three sum">
+      <created>1552391971805</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552391971805</updated>
+    </task>
+    <task id="LOCAL-00018" summary="NO15 Three sum">
+      <created>1552392083165</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552392083165</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11805000" />
+    <option name="totallyTimeSpent" value="12610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21387696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2167382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -437,7 +462,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Duplicate detector" order="12" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -569,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NO11/MostWATER.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -583,13 +601,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NO15/ThreeSUm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="29" column="92" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
+        <state relative-caret-position="336">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO16/ThreeSumCloest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
