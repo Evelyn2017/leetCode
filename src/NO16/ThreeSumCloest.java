@@ -9,7 +9,7 @@ public class ThreeSumCloest {
      * @param target 1
      * @return 2:(-1+2+1=2)
      */
-    public static int threeSumCloset(int[] nums, int target){
+    private static int threeSumCloset(int[] nums, int target){
         int result = nums[0] + nums[1] + nums[nums.length-1];
         Arrays.sort(nums);
 
