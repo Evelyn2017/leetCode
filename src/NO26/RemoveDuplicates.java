@@ -1,6 +1,11 @@
 package NO26;
 
 public class RemoveDuplicates {
+    /**
+     *
+     * @param nums [1,1,2]
+     * @return 2
+     */
     private static int removeDuplicates(int[] nums) {
         if (nums.length == 1)
             return 1;
