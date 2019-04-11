@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="NO16 Three sum closest">
-      <change afterPath="$PROJECT_DIR$/src/NO26/RemoveDuplicates.java" afterDir="false" />
+    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="NO26 remove duplicates:&#10;additional explanation">
+      <change afterPath="$PROJECT_DIR$/src/coding_interview/MaxSubSequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NO16/ThreeSumCloest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NO16/ThreeSumCloest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,19 +24,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/NO26/RemoveDuplicates.java">
+        <entry file="file://$PROJECT_DIR$/src/coding_interview/MaxSubSequence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="312">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -76,6 +66,7 @@
         <option value="$PROJECT_DIR$/src/NO15/ThreeSUm.java" />
         <option value="$PROJECT_DIR$/src/NO16/ThreeSumCloest.java" />
         <option value="$PROJECT_DIR$/src/NO26/RemoveDuplicates.java" />
+        <option value="$PROJECT_DIR$/src/coding_interview/MaxSubSequence.java" />
       </list>
     </option>
   </component>
@@ -89,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,11 +93,16 @@
               <item name="leetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="coding_interview" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -116,7 +113,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553659135107" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554994125707" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -270,7 +267,8 @@
       <workItem from="1552390895951" duration="1218000" />
       <workItem from="1552481438394" duration="898000" />
       <workItem from="1552482439542" duration="164000" />
-      <workItem from="1553657055817" duration="1715000" />
+      <workItem from="1553657055817" duration="1859000" />
+      <workItem from="1554993830283" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="get">
       <created>1522383621840</created>
@@ -405,17 +403,31 @@
       <option name="project" value="LOCAL" />
       <updated>1552482190577</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="NO26 remove duplicates:&#10;the original array should be changed. replace nums[duplicates] with nums[len]">
+      <created>1553659133178</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1553659133178</updated>
+    </task>
+    <task id="LOCAL-00021" summary="NO26 remove duplicates:&#10;additional explanation">
+      <created>1553659183287</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1553659183287</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14732000" />
+    <option name="totallyTimeSpent" value="15147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,7 +436,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3490446" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3490446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.1566879" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,7 +477,9 @@
     <MESSAGE value="NO11 container with most water" />
     <MESSAGE value="NO15 Three sum" />
     <MESSAGE value="NO16 Three sum closest" />
-    <option name="LAST_COMMIT_MESSAGE" value="NO16 Three sum closest" />
+    <MESSAGE value="NO26 remove duplicates:&#10;the original array should be changed. replace nums[duplicates] with nums[len]" />
+    <MESSAGE value="NO26 remove duplicates:&#10;additional explanation" />
+    <option name="LAST_COMMIT_MESSAGE" value="NO26 remove duplicates:&#10;additional explanation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Stack/StackTwo.java">
@@ -583,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NO16/ThreeSumCloest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NO002/AddTwoNumbers/AddTwoNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -599,8 +606,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NO26/RemoveDuplicates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="144">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NO16/ThreeSumCloest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coding_interview/MaxSubSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
