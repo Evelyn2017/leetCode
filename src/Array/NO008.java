@@ -4,7 +4,7 @@ package Array;
 
 public class NO008 {
     /**
-     * @param str -42
+     * @param str "  -42"
      * @return 42
      */
     private static int myAoti(String str) {
