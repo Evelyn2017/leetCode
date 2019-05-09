@@ -1,7 +1,13 @@
 package Array;
 
 public class NO034 {
-    public static int[] findRange(int[] nums, int target) {
+    /**
+     *
+     * @param nums [5,7,7,8,8,10]
+     * @param target 8
+     * @return [3,4]
+     */
+    private static int[] findRange(int[] nums, int target) {
         int[] res = {-1, -1};
         if(nums.length == 0)
             return res;
@@ -14,10 +20,10 @@ public class NO034 {
         return res;
     }
 
-    public static int binary(int[] nums, double target) {
+    private static int binary(int[] nums, double target) {
         int start = 0;
         int end = nums.length - 1;
-        int mid = 0;
+        int mid ;
         while(start <= end) {
             mid = (start + end) / 2;
             if(target < nums[mid])
