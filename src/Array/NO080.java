@@ -1,6 +1,12 @@
 package Array;
 
 public class NO080 {
+    //允许最多有一个重复值，可以扩展到允许最多有n个重复值
+
+    /**
+     * @param nums  [1,1,2,2,3]
+     * @return 3
+     */
     private static int removeDuplicates1_1(int[] nums) {
         int t = 1;
         for(int i = 1; i < nums.length; i++) {
