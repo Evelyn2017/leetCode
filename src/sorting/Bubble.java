@@ -11,7 +11,7 @@ public class Bubble {
      */
     public static int[] bubble(int[] arr){
         if(arr == null || arr.length == 0){
-            System.out.println("Array is null");
+            System.out.println("array is null");
             return arr;
         }
         else{
@@ -37,7 +37,7 @@ public class Bubble {
      */
     public static int[] bubbleBetter(int[] arr){
         if(arr == null || arr.length == 0){
-            System.out.println("Array is null");
+            System.out.println("array is null");
             return arr;
         }
         boolean flag = false;

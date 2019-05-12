@@ -144,10 +144,9 @@ class Node{
 
     /**
      * 插入
-     * @param root
-     * @param val
+     * @param root 1
+     * @param val 1
      */
-
     public void insert(Node root, int val){
         if(root.getValue() < val){
             if(root.right == null)

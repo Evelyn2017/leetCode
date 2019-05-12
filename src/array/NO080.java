@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class NO080 {
     //允许最多有一个重复值，可以扩展到允许最多有n个重复值
