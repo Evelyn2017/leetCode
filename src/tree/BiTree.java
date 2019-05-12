@@ -101,27 +101,25 @@ public class BiTree{
     public List<Integer> inOrderMorris(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         TreeNode cur = root;
-        TreeNode prev = null;
+        TreeNode prev;
         while(cur != null) {
-            if(cur.left == null) {    // 1
+            if(cur.left == null){
                 res.add(cur.val);
                 cur = cur.right;
             }
             else{
                 prev = cur.left;
-                while(prev.right != null && prev.right != cur) // 2
+                while(prev.right!=null && prev.left!=cur)
                     prev = prev.right;
-
-                if(prev.right == null){  // 2.a
+                if (prev.right == null ) {
                     prev.right = cur;
                     cur = cur.left;
                 }
-                else{                   // 2.b
+                else {
                     prev.right = null;
                     res.add(cur.val);
                     cur = cur.right;
                 }
-
             }
         }
         return res;
