@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="add doc">
-      <change afterPath="$PROJECT_DIR$/src/tree/BiTree.java" afterDir="false" />
+    <list default="true" id="d8d4b4d1-c416-4b9f-a991-880cf53f356e" name="Default" comment="binary tree:&#10;pre order traversal, recursive,iterative with stack, w/o stack">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array/NO008.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/NO008.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array/NO033.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/NO033.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array/NO034.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/NO034.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Array/NO080.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array/NO080.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree/BiTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree/BiTree.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tree/BiTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="68" selection-end-column="19" />
+            <state relative-caret-position="600">
+              <caret line="118" column="46" selection-start-line="118" selection-start-column="46" selection-end-line="118" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#205#206#0" expanded="true" />
@@ -162,7 +155,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557643386967" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557646441567" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -323,7 +316,7 @@
       <workItem from="1557413366810" duration="719000" />
       <workItem from="1557494326477" duration="350000" />
       <workItem from="1557578620892" duration="1641000" />
-      <workItem from="1557639036730" duration="3114000" />
+      <workItem from="1557639036730" duration="5136000" />
     </task>
     <task id="LOCAL-00001" summary="get">
       <created>1522383621840</created>
@@ -528,11 +521,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557580325163</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="binary tree:&#10;pre order traversal, recursive,iterative with stack, w/o stack">
+      <created>1557643453061</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1557643453061</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23738000" />
+    <option name="totallyTimeSpent" value="25760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -598,7 +598,8 @@
     <MESSAGE value="binary search" />
     <MESSAGE value="remove duplicates" />
     <MESSAGE value="add doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="add doc" />
+    <MESSAGE value="binary tree:&#10;pre order traversal, recursive,iterative with stack, w/o stack" />
+    <option name="LAST_COMMIT_MESSAGE" value="binary tree:&#10;pre order traversal, recursive,iterative with stack, w/o stack" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Stack/StackTwo.java">
@@ -781,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tree/BiTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="68" selection-end-column="19" />
+        <state relative-caret-position="600">
+          <caret line="118" column="46" selection-start-line="118" selection-start-column="46" selection-end-line="118" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#205#206#0" expanded="true" />

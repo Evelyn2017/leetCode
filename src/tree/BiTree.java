@@ -87,4 +87,43 @@ public class BiTree{
         }
         return res;
     }
+
+
+    /**
+     * Morris 算法中序遍历
+     * 1. 如果当前结点的左孩子结点为空，则输出当前结点，并将其右结点当作当前结点
+     * 2. 如果当前结点的左孩子不为空，在当前节点的左子树中找到当前节点在中序遍历下的前驱节点
+     *      a) 如果前驱节点的右孩子为空，将它的右孩子设置为当前节点。当前节点更新为当前节点的左孩子。
+     *      b) 如果前驱节点的右孩子为当前节点，将它的右孩子重新设为空（恢复树的形状）。输出当前节点。当前节点更新为当前节点的右孩子。
+     * @param root
+     * @return
+     */
+    public List<Integer> inOrderMorris(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        TreeNode cur = root;
+        TreeNode prev = null;
+        while(cur != null) {
+            if(cur.left == null) {    // 1
+                res.add(cur.val);
+                cur = cur.right;
+            }
+            else{
+                prev = cur.left;
+                while(prev.right != null && prev.right != cur) // 2
+                    prev = prev.right;
+
+                if(prev.right == null){  // 2.a
+                    prev.right = cur;
+                    cur = cur.left;
+                }
+                else{                   // 2.b
+                    prev.right = null;
+                    res.add(cur.val);
+                    cur = cur.right;
+                }
+
+            }
+        }
+        return res;
+    }
 }
