@@ -51,7 +51,7 @@ public class BiTree{
     public List<Integer> preOrderMorris(TreeNode root) {
         List<Integer> res = new ArrayList<>();
 //        TreeNode prev;
-        TreeNode cur = root;
+//        TreeNode cur = root;
         while (root != null) {
             //找到最左叶子结点
             if (root.left == null) {
@@ -153,4 +153,5 @@ public class BiTree{
         }
         return res;
     }
+
 }
