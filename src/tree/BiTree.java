@@ -1,8 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 class TreeNode {
     int val;
@@ -124,8 +122,8 @@ public class BiTree{
      * 2. 如果当前结点的左孩子不为空，在当前节点的左子树中找到当前节点在中序遍历下的前驱节点
      *      a) 如果前驱节点的右孩子为空，将它的右孩子设置为当前节点。当前节点更新为当前节点的左孩子。
      *      b) 如果前驱节点的右孩子为当前节点，将它的右孩子重新设为空（恢复树的形状）。输出当前节点。当前节点更新为当前节点的右孩子。
-     * @param root
-     * @return
+     * @param root root node
+     * @return List<>
      */
     public List<Integer> inOrderMorris(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -152,6 +150,41 @@ public class BiTree{
             }
         }
         return res;
+    }
+
+    public List<Integer> LevelOrder(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null)
+            return res;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            TreeNode node = q.poll();
+            res.add(node.val);
+            if (node.left!=null)
+                q.add(node.left);
+            if (node.right != null)
+                q.add(node.right);
+        }
+        return res;
+    }
+
+    /**
+     * get binary tree height
+     * @param root root node
+     * @return int: height
+     */
+    public int getHeight(TreeNode root) {
+        if (root == null)
+            return 0;
+        int leftHeight = getHeight(root.left);
+        int rightHeight = getHeight(root.right);
+        return Math.max(leftHeight, rightHeight);
+    }
+
+
+    public static void main(String[] args) {
+
     }
 
 }
