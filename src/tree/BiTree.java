@@ -6,6 +6,7 @@ class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
+    int height;
 
     TreeNode(int x) {
         this.val = x;
@@ -180,6 +181,21 @@ public class BiTree{
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
         return Math.max(leftHeight, rightHeight);
+    }
+
+    public void LLRotate(TreeNode root) {
+        TreeNode k = root.left;
+        root.left = k.right;
+        k.right = root;
+        root = k;
+    }
+
+    public void RRRotate(TreeNode node) {
+        TreeNode k = node.right;
+        node.right = k.left;
+        k.left = node;
+        node = k;
+
     }
 
 
