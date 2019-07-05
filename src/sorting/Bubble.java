@@ -32,8 +32,8 @@ public class Bubble {
     /**
      * 设置标记flag记录本次循环是否发生交换
      * 若没有发生交换，则表示数组已经是有序状态
-     * @param arr
-     * @return
+     * @param arr 数组
+     * @return arr
      */
     public static int[] bubbleBetter(int[] arr){
         if(arr == null || arr.length == 0){
@@ -51,7 +51,7 @@ public class Bubble {
                     flag = true;
                 }
             }
-            if(flag == false)
+            if(!flag)
                 break;
             else
                 flag = false;

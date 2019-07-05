@@ -175,13 +175,13 @@ public class BiTree{
      * @param root root node
      * @return int: height
      */
-    public int getHeight(TreeNode root) {
-        if (root == null)
-            return 0;
-        int leftHeight = getHeight(root.left);
-        int rightHeight = getHeight(root.right);
-        return Math.max(leftHeight, rightHeight);
-    }
+//    public int getHeight(TreeNode root) {
+//        if (root == null)
+//            return 0;
+//        int leftHeight = getHeight(root.left);
+//        int rightHeight = getHeight(root.right);
+//        return Math.max(leftHeight, rightHeight);
+//    }
 
     public void LLRotate(TreeNode root) {
         TreeNode k = root.left;
