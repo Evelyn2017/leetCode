@@ -43,7 +43,7 @@ public class Bubble {
         boolean flag = false;
         for(int i = 0; i < arr.length - 1; i++){
             for(int j = i + 1; j < arr.length; j++){
-                if(arr[i] < arr[j]){
+                if(arr[i] > arr[j]){
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
@@ -59,15 +59,33 @@ public class Bubble {
         return arr;
     }
 
+    public static void selectSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] < arr[min])
+                    min = j;
+            int t = arr[i];
+            arr[i] = arr[min];
+            arr[min] = t;
+        }
+    }
+
     public static void main(String[] args){
         int[] a = {2, 3, 1, 7, 5};
-        int[] b = bubble(a);
-        for(int i = 0; i < b.length; i++)
-            System.out.print(b[i] + " ");
-        System.out.println();
+//        int[] b = bubble(a);
+//        for(int i = 0; i < b.length; i++)
+//            System.out.print(b[i] + " ");
+//        System.out.println();
         int[] c = bubbleBetter(a);
         for(int i = 0; i < c.length; i++)
             System.out.print(c[i] + " ");
+
+//        selectSort(a);
+//        for (int i: a) {
+//            System.out.println(i);
+//
+//        }
 
 
     }
