@@ -22,12 +22,11 @@ public class Quick {
                 low ++;
             }
             arr[high] = arr[low];
-
         }
         arr[high] = key;
         return high;
-
     }
+
     public static void quickSort(int[] arr, int low, int high){
         if(low > high)
             return;
@@ -45,5 +44,8 @@ public class Quick {
          quickSort(arr, 0, 4);
          for(int i = 0; i < arr.length; i++)
              System.out.print(arr[i] + " ");
+//        String a = new StringBuffer("123");
+//        String b = a;
+//        System.out.println(a==b);
     }
 }
