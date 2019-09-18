@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LongestSubstring {
     /**
-     * silde window technique:use two pointers.
+     * slide window technique:use two pointers.
      * @param s abcaabcd
      * @return 4
      */

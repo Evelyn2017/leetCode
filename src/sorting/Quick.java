@@ -1,5 +1,7 @@
 package sorting;
 
+import java.util.Objects;
+
 public class Quick {
 
     /**
@@ -44,8 +46,9 @@ public class Quick {
          quickSort(arr, 0, 4);
          for(int i = 0; i < arr.length; i++)
              System.out.print(arr[i] + " ");
-//        String a = new StringBuffer("123");
-//        String b = a;
-//        System.out.println(a==b);
+        String a = new String("123");
+        String b = a;
+
+        System.out.println(a==b);
     }
 }
