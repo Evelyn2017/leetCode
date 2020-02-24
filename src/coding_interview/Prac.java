@@ -259,6 +259,7 @@ public class Prac {
             fn[i] = Integer.max(fn[ i - 1] + arr[i], arr[i]);
             res = Integer.max(res, fn[i]);
         }
+
         return res;
 
     }
