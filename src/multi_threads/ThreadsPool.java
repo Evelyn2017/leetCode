@@ -2,7 +2,6 @@ package multi_threads;
 
 import java.util.*;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.Callable;
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
