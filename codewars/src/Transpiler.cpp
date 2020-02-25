@@ -50,11 +50,6 @@ public:
     };
 };
 
-
-std:: ostream& operator << (std::ostream &strm, const Token& token) {
-    return strm<<"Token <"<<token.type << ", "<<token.value<<">"<<endl;
-}
-
 class Lexer {
 public:
     string line;
@@ -165,8 +160,10 @@ string Lexer:: next_name() {
 string Lexer:: arrow() {
     if (current == '-') {
         advance();
-        if (current == '>')
+        if (current == '>') {
+            advance();
             return "->";
+        }
         // TODO: not sure to backward
         else {
             backward();
@@ -274,13 +271,32 @@ bool Transpiler:: eat(token_type type) {
         return true;
     }
 //    else
-//        cout<<"error at " << current_token<<endl;
+//        cout<<"error at " << this->lexer.index<<endl;
     return false;
 }
 
-//function ::= expression "(" [parameters] ")" [lambda] | expression lambda   =====>   function ::= expression "(" [parameters] ")"
+//expression "(" [parameters] ")" [lambda] | expression lambda  ====> expression "(" [parameters] ")"
 string Transpiler:: function() {
-    return "";
+    string expr = expression();
+    if (expr == "")
+        return "";
+    string para;
+    string lam;
+    if (eat(LPAREN) == true) {
+        para = parameters();
+        if (eat(RPAREN) == false)
+            return "";
+        lam = lambda();
+    }
+    else {
+        lam = lambda();
+        if (lam == "")
+            return "";
+    }
+    if (lam != "" && para != "")
+        return expr + "(" +para + "," + lam + ")";
+    else
+        return expr + "(" + para + lam + ")";
 }
 
 string Transpiler:: name_or_number() {
@@ -297,11 +313,13 @@ string Transpiler:: name_or_number() {
 // expression ::= nameOrNumber | lambda  ====>  expression ::= nameOrNumber | lambda
 string Transpiler:: expression() {
     string expr = name_or_number();
+    if (expr != "")
+        return expr;
     
-    if (expr == "")
-        expr = lambda();
-    
-    return expr;
+    string lamb = lambda();
+    if (lamb != "")
+        return lamb;
+    return "";
 }
 
 // parameters ::= expression ["," parameters]  ====>  parameters ::= expression ["," parameters]
@@ -352,6 +370,8 @@ string Transpiler:: lambda() {
         res += "(";
         res += lambda_param();
         res += ")";
+        if (eat(ARROW) == true)
+            res += "";
         res += "{";
         res += lambda_stmt();
         if (eat(RBRACE) == true) {
@@ -361,11 +381,12 @@ string Transpiler:: lambda() {
             return "1";
     }
     else
-        return "";
+        return "2";
     return res;
 }
 
 string transpiler (string expression) {
+    
     return "";
 }
 
@@ -377,24 +398,4 @@ void token_type_cheat_sheet() {
 }
 
 
-// fun() => fun()
-// fun(a) => fun(a)
-// fun(a, b) => fun(a,b)
-// {}() => (){}()
-// fun {} => fun((){})
-// fun(a, {}) => fun(a,(){})
-// fun(a) {} => fun(a,(){})
-// fun {a -> a} => fun((a){a;})
-// {a -> a}(1) => (a){a;}(1)
-// fun { a, b -> a b } => fun((a,b){a;b;})
-// {a, b -> a b} (1, 2) => (a,b){a;b;}(1,2)
-// f { a } => f((){a;})
-// f { a -> } => f((a){})
-int main() {
-    token_type_cheat_sheet();
-    string line = "{}()";
-    Transpiler t = Transpiler(line);
-    cout<<t.lambda()<<endl;
-    
-    return 0;
-}
+
