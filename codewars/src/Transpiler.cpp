@@ -321,28 +321,48 @@ string Transpiler:: parameters() {
 
 // lambdaparam ::= nameOrNumber ["," lambdaparam]  =====>  lambdaparam ::= nameOrNumber ["," lambdaparam]
 string Transpiler:: lambda_param() {
-    string res;
-    if (current_token.type == NAME || current_token.type == NUMBER) {
-        token_type t = current_token.type == NAME ? NAME : NUMBER;
-        res = current_token.value;
-        eat(t);
+    string name_number = name_or_number();
+    if (name_number == "")
+        return "";
+    if (eat(COMMA) == true) {
+        name_number += ",";
+        string param = lambda_param();
+        if (param == "")
+            return "";
+        else
+            return name_number + param;
     }
-    
-    while (eat(COMMA) == true) {
-        
-    }
-    
-    return "";
+    return name_number;
 }
 
 // lambdastmt  ::= nameOrNumber [lambdastmt]  =====>  lambdastmt  ::= nameOrNumber ";" [lambdastmt]
 string Transpiler:: lambda_stmt() {
-    return "";
+    string name_number = name_or_number();
+    if (name_number == "")
+        return "";
+    string stmt = lambda_stmt();
+    name_number += ";";
+    return name_number + stmt;
 }
 
-// lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"   =====>  lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"
+// lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"   =====>  lambda ::= "(" [lambdaparam] "){" [lambdastmt] "}"
 string Transpiler:: lambda() {
-    return "";
+    string res;
+    if (eat(LBRACE) == true) {
+        res += "(";
+        res += lambda_param();
+        res += ")";
+        res += "{";
+        res += lambda_stmt();
+        if (eat(RBRACE) == true) {
+            res += "}";
+        }
+        else
+            return "1";
+    }
+    else
+        return "";
+    return res;
 }
 
 string transpiler (string expression) {
@@ -372,9 +392,9 @@ void token_type_cheat_sheet() {
 // f { a -> } => f((a){})
 int main() {
     token_type_cheat_sheet();
-//    string line = "_a_1, b_1, c1_";
-//    Transpiler t = Transpiler(line);
-//    cout<<t.parameters()<<endl;
+    string line = "{}()";
+    Transpiler t = Transpiler(line);
+    cout<<t.lambda()<<endl;
     
     return 0;
 }
