@@ -27,7 +27,7 @@ using namespace std;
 
 enum token_type {
     NUMBER, // 123
-    NAME,  //_a1, a1, aaa_a
+    NAME,  //_a1, a1, aaa___11111a
     LBRACE, // {
     RBRACE, // }
     LPAREN, // (
@@ -50,6 +50,11 @@ public:
     };
 };
 
+
+std:: ostream& operator << (std::ostream &strm, const Token& token) {
+    return strm<<"Token <"<<token.type << ", "<<token.value<<">"<<endl;
+}
+
 class Lexer {
 public:
     string line;
@@ -57,6 +62,7 @@ public:
     char current;
     
     Lexer(string);
+    Lexer(){};
     
     Token get_next_token();
     Token peek();
@@ -64,7 +70,6 @@ public:
     void error();
 
 private:
-    Lexer(){};
     
     void advance();
     void backward();
@@ -111,7 +116,7 @@ void Lexer:: retreat(Token token) {
 }
 
 void Lexer:: skip_blank() {
-    while (this->index < this->line.length() && this->current == ' ')
+    while (this->index < this->line.length()  && this->current == ' ')
         this->advance();
 }
 
@@ -182,7 +187,7 @@ Token Lexer:: get_next_token() {
             return Token(NUMBER, std::to_string(next_number()));
         }
         
-        if (current == '_') {
+        if (current == '_' || is_letter()) {
             return Token(NAME, next_name());
         }
         
@@ -222,7 +227,7 @@ Token Lexer:: get_next_token() {
         
         error();
     }
-    return Token(END, NULL);
+    return Token(END,"end");
 }
 
 Token Lexer:: peek() {
@@ -235,32 +240,141 @@ void Lexer:: error() {
     cout << "lexical error in " << index << " ." <<endl;
 }
 
-class Function {
+
+class Transpiler {
+public:
+    Lexer lexer;
+    string input;
+    
+    Token current_token;
+    
+    bool eat(token_type);
+    
+    string function();
+    string name_or_number();
+    string expression();
+    string parameters();
+    string lambda_param();
+    string lambda_stmt();
+    string lambda();
+    
+    Transpiler(string);
     
 };
 
-class Expression {
+Transpiler:: Transpiler(string input) {
+    this->input = input;
+    this->lexer = Lexer(this->input);
+    this->current_token = lexer.get_next_token();
+}
+
+bool Transpiler:: eat(token_type type) {
+    if (type == current_token.type) {
+        current_token = lexer.get_next_token();
+        return true;
+    }
+//    else
+//        cout<<"error at " << current_token<<endl;
+    return false;
+}
+
+//function ::= expression "(" [parameters] ")" [lambda] | expression lambda   =====>   function ::= expression "(" [parameters] ")"
+string Transpiler:: function() {
+    return "";
+}
+
+string Transpiler:: name_or_number() {
+    string res;
+    if (current_token.type == NAME || current_token.type == NUMBER) {
+        token_type t = current_token.type == NAME ? NAME : NUMBER;
+        res = current_token.value;
+        eat(t);
+        return res;
+    }
+    return "";
+}
+
+// expression ::= nameOrNumber | lambda  ====>  expression ::= nameOrNumber | lambda
+string Transpiler:: expression() {
+    string expr = name_or_number();
     
-};
-
-class Parameters {
+    if (expr == "")
+        expr = lambda();
     
-};
+    return expr;
+}
 
-class LambdaParam {
+// parameters ::= expression ["," parameters]  ====>  parameters ::= expression ["," parameters]
+string Transpiler:: parameters() {
+    string expr = expression();
+    if (expr == "")
+        return "";
+    while (eat(COMMA) == true) {
+        expr += ",";
+        if (current_token.type == NAME || current_token.type == NUMBER) {
+            expr += current_token.value;
+            eat(current_token.type == NAME ? NAME : NUMBER);
+        }
+    }
+    return expr;
+}
+
+// lambdaparam ::= nameOrNumber ["," lambdaparam]  =====>  lambdaparam ::= nameOrNumber ["," lambdaparam]
+string Transpiler:: lambda_param() {
+    string res;
+    if (current_token.type == NAME || current_token.type == NUMBER) {
+        token_type t = current_token.type == NAME ? NAME : NUMBER;
+        res = current_token.value;
+        eat(t);
+    }
     
-};
-
-class lambdaStmt {
+    while (eat(COMMA) == true) {
+        
+    }
     
-};
+    return "";
+}
 
-class Lambda {
-    
-};
+// lambdastmt  ::= nameOrNumber [lambdastmt]  =====>  lambdastmt  ::= nameOrNumber ";" [lambdastmt]
+string Transpiler:: lambda_stmt() {
+    return "";
+}
 
-
+// lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"   =====>  lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"
+string Transpiler:: lambda() {
+    return "";
+}
 
 string transpiler (string expression) {
     return "";
+}
+
+void token_type_cheat_sheet() {
+    cout<<"-----------------------------------------------------------"<<endl;
+    cout<<NUMBER << "        "<<NAME <<"      "<<LBRACE <<"      "<<RBRACE <<"       "<<LPAREN<<"     "<<RPAREN <<"      " <<ARROW << "     " <<COMMA <<"     "<<SEMICOLON<<endl;
+    cout<<"NUMBER   "<<"NAME   "<<"{ "<<"     }" << "       ("<<"     )"<<"      -> "<<"   ,"<<"     ;"<<endl;
+    cout<<"-----------------------------------------------------------"<<endl;
+}
+
+
+// fun() => fun()
+// fun(a) => fun(a)
+// fun(a, b) => fun(a,b)
+// {}() => (){}()
+// fun {} => fun((){})
+// fun(a, {}) => fun(a,(){})
+// fun(a) {} => fun(a,(){})
+// fun {a -> a} => fun((a){a;})
+// {a -> a}(1) => (a){a;}(1)
+// fun { a, b -> a b } => fun((a,b){a;b;})
+// {a, b -> a b} (1, 2) => (a,b){a;b;}(1,2)
+// f { a } => f((){a;})
+// f { a -> } => f((a){})
+int main() {
+    token_type_cheat_sheet();
+//    string line = "_a_1, b_1, c1_";
+//    Transpiler t = Transpiler(line);
+//    cout<<t.parameters()<<endl;
+    
+    return 0;
 }
