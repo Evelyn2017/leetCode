@@ -235,3 +235,32 @@ void Lexer:: error() {
     cout << "lexical error in " << index << " ." <<endl;
 }
 
+class Function {
+    
+};
+
+class Expression {
+    
+};
+
+class Parameters {
+    
+};
+
+class LambdaParam {
+    
+};
+
+class lambdaStmt {
+    
+};
+
+class Lambda {
+    
+};
+
+
+
+string transpiler (string expression) {
+    return "";
+}
