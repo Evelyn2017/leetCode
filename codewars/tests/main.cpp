@@ -8,7 +8,7 @@
 
 
 #include <iostream>
-#include "../src/Transpiler.cpp"
+#include "../include/Transpiler.hpp"
 
 using namespace std;
 
@@ -28,11 +28,19 @@ using namespace std;
 std:: ostream& operator << (std::ostream &strm, const Token& token) {
     return strm<<"Token <"<<token.type << ", "<<token.value<<">"<<endl;
 }
+
+void token_type_cheat_sheet() {
+    cout<<"-----------------------------------------------------------"<<endl;
+    cout<<NUMBER << "        "<<NAME <<"      "<<LBRACE <<"      "<<RBRACE <<"       "<<LPAREN<<"     "<<RPAREN <<"      " <<ARROW << "     " <<COMMA <<"     "<<SEMICOLON<<endl;
+    cout<<"NUMBER   "<<"NAME   "<<"{ "<<"     }" << "       ("<<"     )"<<"      -> "<<"   ,"<<"     ;"<<endl;
+    cout<<"-----------------------------------------------------------"<<endl;
+}
+
 int main() {
     
-//    token_type_cheat_sheet();
-//    string line = "fun (a) {}";
-//    Transpiler t = Transpiler(line);
-//    cout << t.function()<<endl;
+    token_type_cheat_sheet();
+    string line = "fun (a) {}";
+    Transpiler t = Transpiler(line);
+    cout << t.function()<<endl;
     return 0;
 }

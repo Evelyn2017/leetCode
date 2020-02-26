@@ -9,9 +9,7 @@
 // names, like abc, ABC, run, a1, beginning with _/letters and followed by _/letters/numbers
 // numbers, like 123, 2333, 66666
 // lambda expressions, like { a -> a }, { a, b -> a b }(source), (a){a;}, (a,b){a;b;}(target)
-
-#include <iostream>
-using namespace std;
+#include "../include/Transpiler.hpp"
 
 //char *cat (const char *s0, ...);              // cat all strings together, stop at argument value 0
 //char *segment (const char *s, const char *e); // create string from characters between s (inclusive) and e (exclusive)
@@ -25,63 +23,17 @@ using namespace std;
 //    return "";
 //}
 
-enum token_type {
-    NUMBER, // 123
-    NAME,  //_a1, a1, aaa___11111a
-    LBRACE, // {
-    RBRACE, // }
-    LPAREN, // (
-    RPAREN, // )
-    ARROW, // ->
-    COMMA, // ,
-    SEMICOLON, // ;
-    END
-};
 
-class Token {
-public:
-    token_type type;
-    string value;
-    
-    Token(){};
-    Token(token_type type, string value){
-        this->type = type;
-        this->value = value;
-    };
-};
+////////////////Token///////////////////////
+Token:: Token(token_type type, string value) {
+    this->type = type;
+    this->value = value;
+}
 
-class Lexer {
-public:
-    string line;
-    int index;
-    char current;
-    
-    Lexer(string);
-    Lexer(){};
-    
-    Token get_next_token();
-    Token peek();
-    
-    void error();
 
-private:
-    
-    void advance();
-    void backward();
-    
-    void retreat(Token token);
-    
-    void skip_blank();
-    bool is_number();
-    int next_number();
-    
-    bool is_letter();
-    bool is_underline();
-    string next_name();
-    
-    string arrow();
-};
 
+
+////////////////////Lexer//////////////////
 Lexer:: Lexer(string line) {
     this->line = line;
     this->index = 0;
@@ -238,27 +190,7 @@ void Lexer:: error() {
 }
 
 
-class Transpiler {
-public:
-    Lexer lexer;
-    string input;
-    
-    Token current_token;
-    
-    bool eat(token_type);
-    
-    string function();
-    string name_or_number();
-    string expression();
-    string parameters();
-    string lambda_param();
-    string lambda_stmt();
-    string lambda();
-    
-    Transpiler(string);
-    
-};
-
+////////////////////////Transpiler///////////////////////////
 Transpiler:: Transpiler(string input) {
     this->input = input;
     this->lexer = Lexer(this->input);
@@ -390,12 +322,6 @@ string transpiler (string expression) {
     return "";
 }
 
-void token_type_cheat_sheet() {
-    cout<<"-----------------------------------------------------------"<<endl;
-    cout<<NUMBER << "        "<<NAME <<"      "<<LBRACE <<"      "<<RBRACE <<"       "<<LPAREN<<"     "<<RPAREN <<"      " <<ARROW << "     " <<COMMA <<"     "<<SEMICOLON<<endl;
-    cout<<"NUMBER   "<<"NAME   "<<"{ "<<"     }" << "       ("<<"     )"<<"      -> "<<"   ,"<<"     ;"<<endl;
-    cout<<"-----------------------------------------------------------"<<endl;
-}
 
 
 
