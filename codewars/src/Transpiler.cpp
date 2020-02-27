@@ -63,7 +63,7 @@ void Lexer:: retreat(Token token) {
 }
 
 void Lexer:: skip_blank() {
-    while (this->index < this->line.length()  && this->current == ' ')
+    while (this->index < this->line.length()  && (this->current == ' ' || current == '\n'))
         this->advance();
 }
 
@@ -174,7 +174,12 @@ Token Lexer:: get_next_token() {
             return Token(SEMICOLON, ";");
         }
         
-        error();
+//        if (current = '\n')
+//        {
+//            advance();
+//            continue;
+//        }
+        advance();
     }
     return Token(END,"end");
 }
@@ -207,28 +212,42 @@ bool Transpiler:: eat(token_type type) {
     return false;
 }
 
+
+// fun(a) {} ==> fun(a, (){})
+// fun (a, {}) == fun(a){}
+//{}()
+// fun{} ==> fun()
+// fun{a->a}
 //expression "(" [parameters] ")" [lambda] | expression lambda  ====> expression "(" [parameters] ")"
-string Transpiler:: function() {
+const char* Transpiler:: function() {
     string expr = expression();
-    if (expr == "")
-        return "";
     string para;
     string lam;
     if (eat(LPAREN) == true) {
         para = parameters();
-        if (eat(RPAREN) == false)
-            return "";
-        lam = lambda();
+        if (!eat(RPAREN)) {
+            lam = lambda();
+            if (lam == "")
+                return "";
+            return (expr + "(" + para + lam + ")").c_str();
+        }
+        else {
+            lam = lambda();
+        }
     }
     else {
         lam = lambda();
         if (lam == "")
             return "";
     }
-    if (lam != "" && para != "")
-        return expr + "(" +para + "," + lam + ")";
-    else
-        return expr + "(" + para + lam + ")";
+    
+    if (lam != "" && para != "") {
+        return (expr + "(" + para + "," + lam + ")").c_str();
+    }
+    else {
+        string tmp = expr + "(" + para + lam + ")";
+        return tmp.c_str();
+    }
 }
 
 string Transpiler:: name_or_number() {
@@ -254,6 +273,7 @@ string Transpiler:: expression() {
     return "";
 }
 
+// a,b
 // parameters ::= expression ["," parameters]  ====>  parameters ::= expression ["," parameters]
 string Transpiler:: parameters() {
     string expr = expression();
@@ -295,31 +315,36 @@ string Transpiler:: lambda_stmt() {
     return name_number + stmt;
 }
 
+
+// {}()
+// {a} ==> (){a;}
+// {a->a} ==> (a){a;}
+// fun() ==> fun()
 // lambda ::= "{" [lambdaparam "->"] [lambdastmt] "}"   =====>  lambda ::= "(" [lambdaparam] "){" [lambdastmt] "}"
 string Transpiler:: lambda() {
-    string res;
-    if (eat(LBRACE) == true) {
-        res += "(";
-        res += lambda_param();
-        res += ")";
-        if (eat(ARROW) == true)
-            res += "";
-        res += "{";
-        res += lambda_stmt();
-        if (eat(RBRACE) == true) {
-            res += "}";
+    string param;
+    string stmt;
+    if (eat(LBRACE)) {
+        param = lambda_param();
+        if (param != "") {
+            if (eat(ARROW)) {
+                param = "(" + param + ")";
+                stmt = "{" + lambda_stmt() + "}";
+            }
+            else {
+                stmt = "{" + param + ";}";
+                param = "()"; 
+            }
+            
         }
-        else
-            return "1";
+        else {
+            param = "(" + param + ")";
+            stmt = "{" + lambda_stmt() + "}";
+        }
+        if (!eat(RBRACE))
+            return "";
     }
-    else
-        return "2";
-    return res;
-}
-
-string transpiler (string expression) {
-    
-    return "";
+    return param  + stmt;
 }
 
 

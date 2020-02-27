@@ -25,6 +25,7 @@ enum token_type {
     ARROW, // ->
     COMMA, // ,
     SEMICOLON, // ;
+    EMPTY, // \n
     END
 };
 
@@ -50,13 +51,14 @@ public:
     Token peek();
     
     void error();
-    
-private:
-    
     void advance();
     void backward();
     
     void retreat(Token token);
+    
+private:
+    
+
     
     void skip_blank();
     bool is_number();
@@ -64,6 +66,7 @@ private:
     
     bool is_letter();
     bool is_underline();
+
     string next_name();
     
     string arrow();
@@ -78,7 +81,7 @@ public:
     
     bool eat(token_type);
     
-    string function();
+    const char* function();
     string name_or_number();
     string expression();
     string parameters();
